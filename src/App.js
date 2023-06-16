@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { setupDiscoveryCms, getDiscoveryCms } from "@discoverycms/connector";
+import { setupDiscoveryCms /*getDiscoveryCms*/ } from "@discoverycms/connector";
 import TestComponent from "./components/TestComponent";
 import TestComponentButton from "./components/TestComponentButton";
 import TestCarousel from "./components/TestCarousel";

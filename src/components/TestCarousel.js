@@ -1,6 +1,6 @@
 import {
 	DiscoveryContext,
-	DiscoveryComponent,
+	//DiscoveryComponent,
 	useComponentData,
 } from "@discoverycms/connector";
 import TestComponent from "./TestComponent";
@@ -20,7 +20,7 @@ function TestCarousel({ componentId }) {
 					return (
 						<div>
 							<h3>Card #{index}</h3>
-							{card._id}
+							<p>{card._id}</p>
 						</div>
 					);
 				})}

@@ -1,6 +1,6 @@
 import {
 	DiscoveryContext,
-	DiscoveryComponent,
+	//DiscoveryComponent,
 	useComponentData,
 	useDiscoveryAsset,
 } from "@discoverycms/connector";
