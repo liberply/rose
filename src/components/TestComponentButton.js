@@ -9,8 +9,15 @@ function TestComponentButton({ componentId }) {
 	if (componentData === undefined) {
 		return <span>Loading..</span>;
 	}
+	console.log("TestComponentButton" + componentData.Button_url[0].url);
 	return (
-		<div className="bg-white py-12" data-discovery-id={componentId}>
+		<div
+			style={{
+				backgroundColor: "lemonchiffon",
+			}}
+			className="bg-white py-12"
+			data-discovery-id={componentId}
+		>
 			<div className="text-blue-900 font-semibold text-4xl mb-12 flex justify-center">
 				<p>
 					<b>Button url:</b>

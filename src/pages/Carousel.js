@@ -14,12 +14,15 @@ export default function Carousel() {
 		apiOptions[key] = queryParam[1];
 	}
 
-	const data = useDiscoveryPage("carousel", apiOptions) ?? {};
+	const data = useDiscoveryPage("canvas", apiOptions) ?? {};
+	console.log("DIS ");
 	console.log(data);
-	console.log(process.env.NODE_ENV);
 	return (
 		<div className="h-4/6">
 			<div className="max-w-9xl mx-auto lg:mt-16 mb-24">
+				<h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+						ENV: {process.env.REACT_APP_ENV}
+				</h1>
 				<DiscoveryContext.Provider value={data}>
 					<DiscoveryComponents />
 				</DiscoveryContext.Provider>

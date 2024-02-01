@@ -11,6 +11,8 @@ function TestCarousel({ componentId }) {
 	if (componentData === undefined) {
 		return <span>Loading..</span>;
 	}
+
+	console.log("TestCarousel" + componentData.Title_text);
 	return (
 		<div className="bg-white py-12" data-discovery-id={componentId}>
 			<div className="text-blue-900 font-semibold text-4xl mb-12 flex justify-center">

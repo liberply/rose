@@ -8,21 +8,6 @@ function docReady(fn) {
     document.addEventListener('create-discovery-component', fn);
 }
 
-function enablePreviewModeIfNeeded() {
-    const previewEnabled = document.getElementById('connectorScript').getAttribute('data-preview-enabled');
-
-    // Every framework except NextJS
-    if (previewEnabled == null) {
-        return;
-    }
-
-    if (previewEnabled === 'true') {
-        console.log('Using Preview Mode')
-    } else {
-        parent.postMessage({ enablePreview: true }, '*');
-    }
-}
-
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -31,8 +16,6 @@ let preview = params.preview;
 
 if (preview === 'editor') {
     docReady(function () {
-        enablePreviewModeIfNeeded();
-
         setTimeout(() => {
             const discoveryComponents = document.querySelectorAll('[data-discovery-id]');
 
